@@ -9,12 +9,12 @@
 export type NavItem = { label: string; href: string };
 
 export const nav: NavItem[] = [
-  { label: "About", href: "#about" },
-  { label: "Research", href: "#research" },
-  { label: "Entrepreneurship", href: "#entrepreneurship" },
-  { label: "Publications", href: "#publications" },
-  { label: "Speaking", href: "#speaking" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Research", href: "/research" },
+  { label: "Entrepreneurship", href: "/entrepreneurship" },
+  { label: "Publications", href: "/publications" },
+  { label: "Speaking", href: "/#speaking" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const profile = {

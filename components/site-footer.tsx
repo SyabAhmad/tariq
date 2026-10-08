@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { nav, profile } from "@/content/site";
 
 const connectLinks = [
@@ -26,9 +27,9 @@ export function SiteFooter() {
             <ul className="mt-5 space-y-3">
               {nav.map((item) => (
                 <li key={item.label}>
-                  <a href={item.href} className="text-sm text-ivory/60 transition-colors hover:text-ivory">
+                  <Link href={item.href} className="text-sm text-ivory/60 transition-colors hover:text-ivory">
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

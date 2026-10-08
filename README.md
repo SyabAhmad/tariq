@@ -15,7 +15,20 @@ npm run lint     # ESLint
 
 ## Editing content
 
-All copy, links and section data live in [`content/site.ts`](./content/site.ts) — no component edits needed for text changes. Each section in `components/` reads from that file.
+All copy, links and section data live in `content/*.ts` — no component edits needed for text changes. Each section in `components/` reads from these files.
+
+| Page | Route | Content module |
+| --- | --- | --- |
+| Home | `/` | `content/site.ts` |
+| About | `/about` | `content/about.ts` |
+| Research | `/research` | `content/research.ts` + `content/publications.ts` |
+| Entrepreneurship & Impact | `/entrepreneurship` | `content/entrepreneurship.ts` |
+| Publications | `/publications` | `content/publications.ts` (structured records: title, authors, year, journal, volume/issue/pages, summary, keywords, DOI, URLs, categories) |
+| Speaking & Engagement | `/speaking` | `content/speaking.ts` |
+| Academic Leadership | `/leadership` | `content/leadership.ts` |
+| Contact & Collaboration | `/contact` | `content/contact.ts` |
+
+Header navigation shows six items (About · Research · Entrepreneurship · Publications · Speaking · Contact); Academic Leadership is reached via About.
 
 ## Brand
 
