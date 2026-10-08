@@ -205,19 +205,19 @@ export const publications: Publication[] = [
 ];
 
 /** Topic cloud — clicking a topic filters the library by category or keyword. */
-export const topics: string[] = [
-  "Entrepreneurship",
-  "Entrepreneurship Education",
-  "Value Creation",
-  "Sustainability",
-  "Circular Economy",
-  "Recycling",
-  "Informal Economy",
-  "Bottom-of-Pyramid Markets",
-  "Innovation",
-  "Climate Change",
-  "Agriculture",
-  "Governance",
+export const topics: Array<{ label: string; term: string }> = [
+  { label: "Entrepreneurship", term: "entrepreneurship" },
+  { label: "Entrepreneurship Education", term: "entrepreneurship education" },
+  { label: "Value Creation", term: "value creation" },
+  { label: "Sustainability", term: "sustainability" },
+  { label: "Circular Economy", term: "circular economy" },
+  { label: "Recycling", term: "recycling" },
+  { label: "Informal Economy", term: "informal economy" },
+  { label: "Bottom-of-Pyramid Markets", term: "bottom of pyramid" },
+  { label: "Innovation", term: "innovation" },
+  { label: "Climate Change", term: "climate" },
+  { label: "Agriculture", term: "agriculture" },
+  { label: "Governance", term: "governance" },
 ];
 
 export const publicationMetrics = [

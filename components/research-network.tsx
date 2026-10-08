@@ -3,7 +3,7 @@ import { ActionLink, Eyebrow, Section, SourceNote } from "./section";
 
 export function ResearchNetwork({ data }: { data: typeof researchData.network }) {
   return (
-    <Section tone="ivory">
+    <Section id="network" tone="ivory">
       <div className="max-w-3xl">
         <Eyebrow>Research Network</Eyebrow>
         <h2 className="font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-forest md:text-4xl">

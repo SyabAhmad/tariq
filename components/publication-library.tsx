@@ -109,19 +109,26 @@ function PublicationRow({
 /**
  * Searchable, filterable, sortable publication archive.
  * All data comes from content/publications.ts — adding a paper is a data edit.
+ * Query can be controlled externally (e.g. by the topic cloud) via query/onQueryChange.
  */
 export function PublicationLibrary({
   eyebrow,
   heading,
   note,
   showControls = true,
+  query: controlledQuery,
+  onQueryChange,
 }: {
   eyebrow: string;
   heading: string;
   note?: string;
   showControls?: boolean;
+  query?: string;
+  onQueryChange?: (value: string) => void;
 }) {
-  const [query, setQuery] = useState("");
+  const [internalQuery, setInternalQuery] = useState("");
+  const query = controlledQuery ?? internalQuery;
+  const setQuery = onQueryChange ?? setInternalQuery;
   const [category, setCategory] = useState<Category | "All">("All");
   const [year, setYear] = useState<number | "All">("All");
   const [sort, setSort] = useState<"newest" | "oldest" | "title">("newest");
