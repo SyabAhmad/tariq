@@ -23,7 +23,7 @@ function ChatGptIcon() {
  * about Dr. Yousafzai, with the portfolio link included.
  */
 export function AskGptBadge({ className = "" }: { className?: string }) {
-  const query = `who is ${profile.name}?`;
+  const query = `who is Dr. ${profile.name}?`;
   const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(query)}`;
 
   return (

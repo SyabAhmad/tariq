@@ -17,7 +17,7 @@ export function Hero() {
           <div className="lg:col-span-8">
             <Eyebrow>{hero.eyebrow}</Eyebrow>
             <h1 className="mt-8 font-display text-5xl font-semibold leading-[1.02] tracking-[-0.03em] text-ink md:text-7xl lg:text-[5.5rem]">
-              {hero.heading}
+              <span className="text-oxblood">Dr.</span> {hero.heading}
             </h1>
             <p className="mt-8 max-w-xl font-mono text-xs uppercase tracking-[0.2em] text-ink-soft">
               {hero.role}
