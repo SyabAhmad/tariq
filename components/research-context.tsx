@@ -1,5 +1,5 @@
 import type { research as researchData } from "@/content/research";
-import { Eyebrow, Section } from "./section";
+import { Section } from "./section";
 
 export function ResearchContext({ data }: { data: typeof researchData.context }) {
   return (
