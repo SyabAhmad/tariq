@@ -8,7 +8,7 @@ function Paragraph({ text, bold = [] }: { text: string; bold?: string[] }) {
     <>
       {text.split(regex).map((part, i) =>
         bold.includes(part) ? (
-          <strong key={i} className="font-semibold text-forest">
+          <strong key={i} className="font-semibold text-ink">
             {part}
           </strong>
         ) : (
@@ -21,11 +21,11 @@ function Paragraph({ text, bold = [] }: { text: string; bold?: string[] }) {
 
 export function AboutProfile() {
   return (
-    <Section tone="ivory">
+    <Section tone="paper">
       <div className="grid gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-5">
           <Eyebrow>{about.profile.eyebrow}</Eyebrow>
-          <h2 className="font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-forest md:text-4xl">
+          <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-4xl">
             {about.profile.heading}
           </h2>
           <div className="mt-8">
@@ -34,7 +34,7 @@ export function AboutProfile() {
         </div>
         <div className="space-y-6 md:col-span-7 md:pt-14">
           {about.profile.paragraphs.map((paragraph, i) => (
-            <p key={i} className="text-lg leading-relaxed text-charcoal/75">
+            <p key={i} className="text-lg leading-relaxed text-ink-soft">
               <Paragraph text={paragraph} bold={i === 0 ? ["20 years", "60 publications"] : []} />
             </p>
           ))}

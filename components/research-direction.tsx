@@ -3,11 +3,11 @@ import { Eyebrow, Section, SourceNote } from "./section";
 
 export function ResearchDirection({ data }: { data: typeof researchData.direction }) {
   return (
-    <Section tone="white" className="border-b border-charcoal/10">
+    <Section tone="cream">
       <div className="grid gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-5">
           <Eyebrow>{data.eyebrow}</Eyebrow>
-          <h2 className="font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-forest md:text-4xl">
+          <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-4xl">
             {data.heading}
           </h2>
         </div>
@@ -16,13 +16,13 @@ export function ResearchDirection({ data }: { data: typeof researchData.directio
             {data.items.map((item) => (
               <li
                 key={item}
-                className="rounded-full border border-forest/25 px-5 py-2.5 font-display text-base font-semibold text-forest"
+                className="rounded-full border border-ink/20 px-6 py-3 font-display text-lg font-semibold text-ink"
               >
                 {item}
               </li>
             ))}
           </ul>
-          <p className="mt-8 leading-relaxed text-charcoal/65">{data.body}</p>
+          <p className="mt-8 leading-relaxed text-ink-soft">{data.body}</p>
           <div className="mt-6">
             <SourceNote source={data.source} />
           </div>

@@ -31,7 +31,7 @@ export default function PublicationsPage() {
         eyebrow="Selected Research"
         heading="Featured Publications"
         items={featuredItems}
-        tone="ivory"
+        tone="paper"
       />
       <PublicationsBrowser
         eyebrow="Publication Library"

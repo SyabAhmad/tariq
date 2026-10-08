@@ -5,23 +5,23 @@ import { contact } from "@/content/contact";
 import { Eyebrow } from "./section";
 
 const inputBase =
-  "mt-2 w-full rounded-xl border border-charcoal/15 bg-ivory px-4 py-3.5 text-sm text-charcoal outline-none transition-colors placeholder:text-charcoal/35 focus:border-gold";
-const labelBase = "block text-xs font-medium uppercase tracking-[0.16em] text-charcoal/50";
+  "mt-2 w-full rounded-xl border border-ink/15 bg-paper px-4 py-3.5 text-sm text-ink outline-none transition-colors placeholder:text-ink-soft/40 focus:border-oxblood";
+const labelBase = "block font-mono text-[11px] uppercase tracking-[0.16em] text-ink-soft/60";
 
 export function ContactForm() {
   const { form } = contact;
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section id="start" className="scroll-mt-24 border-b border-charcoal/10 bg-white px-6 py-24 md:py-32">
+    <section id="start" className="scroll-mt-24 border-b border-hairline bg-paper px-6 py-24 md:py-32">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-14 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
             <Eyebrow>{form.eyebrow}</Eyebrow>
-            <h2 className="font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-forest md:text-4xl">
+            <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-4xl">
               {form.heading}
             </h2>
-            <p className="mt-6 leading-relaxed text-charcoal/60">
+            <p className="mt-6 leading-relaxed text-ink-soft">
               A short message is enough — tell Dr. Tariq who you are and what you have in mind.
             </p>
           </div>
@@ -98,17 +98,20 @@ export function ContactForm() {
             <div className="mt-8 flex flex-wrap items-center gap-6">
               <button
                 type="submit"
-                className="group inline-flex items-center gap-2.5 rounded-full bg-forest px-7 py-3.5 text-sm font-medium tracking-wide text-ivory transition-all duration-300 hover:bg-forest-deep hover:shadow-lg hover:shadow-forest/10"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-ink px-7 py-3.5 text-sm font-medium tracking-wide text-paper transition-all duration-300 hover:bg-oxblood"
               >
                 {form.submitLabel}
-                <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">
+                <span
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                  aria-hidden="true"
+                >
                   →
                 </span>
               </button>
-              <p className="text-xs text-charcoal/45">{form.privacy}</p>
+              <p className="text-xs text-ink-soft/50">{form.privacy}</p>
             </div>
             {submitted && (
-              <p className="mt-6 rounded-xl border border-gold/40 bg-ivory p-4 text-sm leading-relaxed text-charcoal/65">
+              <p className="mt-6 rounded-xl border border-oxblood/30 bg-cream p-4 text-sm leading-relaxed text-ink-soft">
                 Thank you — this preview does not send email yet. {form.note}
               </p>
             )}

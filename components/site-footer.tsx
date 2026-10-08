@@ -11,23 +11,28 @@ const connectLinks = [
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="scroll-mt-24 border-t border-ivory/10 bg-forest-deep px-6 py-16 text-ivory">
+    <footer id="contact" className="scroll-mt-24 bg-ink px-6 py-20 text-paper">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-12 md:grid-cols-3">
+        <div className="grid gap-14 md:grid-cols-3">
           <div>
-            <p className="font-display text-xl font-semibold tracking-tight">{profile.wordmark}</p>
-            <p className="mt-4 leading-relaxed text-ivory/60">
+            <p className="font-display text-2xl font-semibold tracking-tight">{profile.wordmark}</p>
+            <p className="mt-5 leading-relaxed text-paper/50">
               Associate Professor · Centre for Management and Commerce
               <br />
               University of Swat
             </p>
           </div>
           <nav aria-label="Explore">
-            <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-gold">Explore</h2>
-            <ul className="mt-5 space-y-3">
+            <h2 className="font-mono text-[11px] uppercase tracking-[0.24em] text-oxblood-soft">
+              Explore
+            </h2>
+            <ul className="mt-6 space-y-3.5">
               {nav.map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="text-sm text-ivory/60 transition-colors hover:text-ivory">
+                  <Link
+                    href={item.href}
+                    className="text-sm text-paper/60 transition-colors hover:text-paper"
+                  >
                     {item.label}
                   </Link>
                 </li>
@@ -35,13 +40,15 @@ export function SiteFooter() {
             </ul>
           </nav>
           <div>
-            <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-gold">Connect</h2>
-            <ul className="mt-5 space-y-3">
+            <h2 className="font-mono text-[11px] uppercase tracking-[0.24em] text-oxblood-soft">
+              Connect
+            </h2>
+            <ul className="mt-6 space-y-3.5">
               {connectLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-ivory/60 transition-colors hover:text-ivory"
+                    className="text-sm text-paper/60 transition-colors hover:text-paper"
                     {...(link.href.startsWith("mailto:") ? {} : { target: "_blank", rel: "noopener noreferrer" })}
                   >
                     {link.label}
@@ -51,7 +58,7 @@ export function SiteFooter() {
             </ul>
           </div>
         </div>
-        <div className="mt-14 flex flex-col gap-3 border-t border-ivory/10 pt-8 text-xs text-ivory/40 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-3 border-t border-paper/10 pt-8 text-xs text-paper/35 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Muhammad Tariq Yousafzai</p>
           <p>Content compiled from public professional profiles; figures pending his confirmation.</p>
         </div>

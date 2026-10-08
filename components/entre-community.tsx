@@ -4,25 +4,25 @@ import { Eyebrow, Section } from "./section";
 export function CommunityEntrepreneurship() {
   const { community } = entrepreneurship;
   return (
-    <Section tone="ivory">
+    <Section tone="paper">
       <div className="max-w-3xl">
         <Eyebrow>Community Entrepreneurship</Eyebrow>
-        <h2 className="font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-forest md:text-4xl">
+        <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-4xl">
           {community.heading}
         </h2>
-        <p className="mt-6 text-lg leading-relaxed text-charcoal/65">{community.lead}</p>
+        <p className="mt-6 text-lg leading-relaxed text-ink-soft">{community.lead}</p>
       </div>
       <div className="mt-16 grid gap-8 md:grid-cols-3">
-        {community.items.map((item) => (
+        {community.items.map((item, index) => (
           <article
             key={item.title}
-            className="group flex flex-col rounded-2xl border border-charcoal/10 bg-white p-9 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-xl hover:shadow-forest/5"
+            className="group flex flex-col border border-hairline bg-white p-9 transition-all duration-300 hover:-translate-y-1 hover:border-oxblood/30"
           >
-            <span aria-hidden="true" className="text-3xl">
-              {item.glyph}
+            <span className="font-display text-3xl font-semibold text-oxblood">
+              {String(index + 1).padStart(2, "0")}
             </span>
-            <h3 className="mt-6 font-display text-xl font-semibold text-forest">{item.title}</h3>
-            <p className="mt-3 leading-relaxed text-sm text-charcoal/65">{item.body}</p>
+            <h3 className="mt-6 font-display text-xl font-semibold text-ink">{item.title}</h3>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.body}</p>
           </article>
         ))}
       </div>

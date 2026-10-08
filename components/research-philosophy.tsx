@@ -4,25 +4,25 @@ import { Eyebrow, Section } from "./section";
 export function ResearchPhilosophy({ data }: { data: typeof researchData.philosophy }) {
   const [before, after] = data.body.split(data.emphasis);
   return (
-    <Section tone="forest" className="relative overflow-hidden">
-      <div className="relative max-w-4xl">
+    <Section tone="ink">
+      <div className="max-w-4xl">
         <Eyebrow>{data.eyebrow}</Eyebrow>
-        <h2 className="font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-ivory md:text-5xl">
+        <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-paper md:text-5xl">
           {data.heading}
         </h2>
-        <p className="mt-10 max-w-3xl text-lg leading-relaxed text-ivory/75">
+        <p className="mt-12 max-w-3xl text-lg leading-relaxed text-paper/70">
           {before}
-          <span className="font-medium text-gold-soft">{data.emphasis}</span>
+          <span className="font-medium text-paper">{data.emphasis}</span>
           {after}
         </p>
-        <ol className="mt-14 flex flex-wrap items-center gap-x-4 gap-y-4">
+        <ol className="mt-16 flex flex-wrap items-center gap-x-5 gap-y-5">
           {data.chain.map((step, index) => (
-            <li key={step} className="flex items-center gap-4">
-              <span className="font-display text-2xl font-semibold text-ivory md:text-3xl">
+            <li key={step} className="flex items-center gap-5">
+              <span className="font-display text-3xl font-semibold text-paper md:text-4xl">
                 {step}
               </span>
               {index < data.chain.length - 1 && (
-                <span aria-hidden="true" className="text-xl text-gold">
+                <span aria-hidden="true" className="text-2xl text-oxblood-soft">
                   →
                 </span>
               )}

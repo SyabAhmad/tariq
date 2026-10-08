@@ -3,17 +3,14 @@ import { ActionLink, Eyebrow, Section } from "./section";
 
 export function AboutRoles() {
   return (
-    <Section id="roles" tone="white" className="border-y border-charcoal/10">
-      <div className="grid gap-8 md:grid-cols-2">
+    <Section id="roles" tone="cream">
+      <div className="grid gap-px overflow-hidden border border-hairline bg-hairline md:grid-cols-2">
         {about.leadership.roles.map((role) => (
-          <article
-            key={role.title}
-            className="relative overflow-hidden rounded-2xl border border-charcoal/10 bg-ivory p-10"
-          >
-            <span aria-hidden="true" className="absolute inset-x-0 top-0 h-1 bg-gold" />
-            <h2 className="font-display text-2xl font-semibold text-forest">{role.title}</h2>
-            <p className="mt-4 leading-relaxed text-charcoal/65">{role.department}</p>
-            <p className="font-medium text-charcoal/80">{role.organization}</p>
+          <article key={role.title} className="bg-paper p-10">
+            <span aria-hidden="true" className="block h-px w-10 bg-oxblood" />
+            <h2 className="mt-7 font-display text-2xl font-semibold text-ink">{role.title}</h2>
+            <p className="mt-4 leading-relaxed text-ink-soft">{role.department}</p>
+            <p className="font-medium text-ink">{role.organization}</p>
           </article>
         ))}
       </div>
@@ -23,37 +20,37 @@ export function AboutRoles() {
 
 export function Journey() {
   return (
-    <Section tone="ivory">
+    <Section tone="paper">
       <div className="max-w-3xl">
         <Eyebrow>{about.journey.eyebrow}</Eyebrow>
-        <h2 className="font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-forest md:text-4xl">
+        <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-4xl">
           {about.journey.heading}
         </h2>
       </div>
-      <ol className="relative mt-16 space-y-14 before:absolute before:bottom-4 before:left-[7px] before:top-2 before:w-px before:bg-charcoal/15">
+      <ol className="relative mt-16 space-y-14 before:absolute before:bottom-4 before:left-[7px] before:top-2 before:w-px before:bg-hairline">
         {about.journey.stages.map((stage, i) => (
           <li key={stage.title} className="relative pl-10">
             <span
               aria-hidden="true"
-              className="absolute left-0 top-1.5 flex h-4 w-4 items-center justify-center rounded-full border border-gold bg-ivory"
+              className="absolute left-0 top-1.5 flex h-4 w-4 items-center justify-center rounded-full border border-oxblood bg-paper"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+              <span className="h-1.5 w-1.5 rounded-full bg-oxblood" />
             </span>
             <div className="grid gap-6 md:grid-cols-12">
               <div className="md:col-span-4">
-                <span className="text-xs font-medium uppercase tracking-[0.18em] text-gold">
+                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-oxblood">
                   {stage.period}
                 </span>
-                <p className="mt-2 font-display text-xl font-semibold text-forest">{stage.place}</p>
+                <p className="mt-2 font-display text-xl font-semibold text-ink">{stage.place}</p>
               </div>
               <div className="md:col-span-8">
-                <h3 className="font-display text-lg font-semibold text-charcoal">{stage.title}</h3>
-                <p className="mt-3 leading-relaxed text-charcoal/65">{stage.body}</p>
+                <h3 className="font-display text-lg font-semibold text-ink">{stage.title}</h3>
+                <p className="mt-3 leading-relaxed text-ink-soft">{stage.body}</p>
                 {stage.credentials && (
                   <ul className="mt-4 space-y-2">
                     {stage.credentials.map((credential) => (
-                      <li key={credential} className="flex items-baseline gap-3 text-sm text-charcoal/55">
-                        <span aria-hidden="true" className="h-1 w-1 shrink-0 rounded-full bg-gold" />
+                      <li key={credential} className="flex items-baseline gap-3 text-sm text-ink-soft/70">
+                        <span aria-hidden="true" className="h-1 w-1 shrink-0 rounded-full bg-oxblood" />
                         {credential}
                       </li>
                     ))}

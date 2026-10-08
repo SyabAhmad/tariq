@@ -3,10 +3,10 @@ import { ActionLink, Eyebrow, Section, SourceNote } from "./section";
 
 export function ResearchNetwork({ data }: { data: typeof researchData.network }) {
   return (
-    <Section id="network" tone="ivory">
+    <Section id="network" tone="paper">
       <div className="max-w-3xl">
         <Eyebrow>Research Network</Eyebrow>
-        <h2 className="font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-forest md:text-4xl">
+        <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-4xl">
           {data.heading}
         </h2>
       </div>
@@ -14,13 +14,13 @@ export function ResearchNetwork({ data }: { data: typeof researchData.network })
         {data.countries.map((country) => (
           <li
             key={country}
-            className="rounded-full border border-charcoal/15 px-5 py-2.5 text-sm text-charcoal/70"
+            className="rounded-full border border-ink/15 px-5 py-2.5 text-sm text-ink-soft"
           >
             {country}
           </li>
         ))}
       </ul>
-      <p className="mt-10 max-w-3xl leading-relaxed text-charcoal/65">{data.body}</p>
+      <p className="mt-10 max-w-3xl leading-relaxed text-ink-soft">{data.body}</p>
       <div className="mt-6">
         <SourceNote source={data.source} />
       </div>

@@ -3,10 +3,10 @@ import { ActionLink, Eyebrow, Section } from "./section";
 
 export function AboutSelectedResearch() {
   return (
-    <Section id="selected" tone="white" className="border-y border-charcoal/10">
+    <Section id="selected" tone="cream">
       <div className="max-w-3xl">
         <Eyebrow>{about.selected.eyebrow}</Eyebrow>
-        <h2 className="font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-forest md:text-4xl">
+        <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-4xl">
           {about.selected.heading}
         </h2>
       </div>
@@ -14,14 +14,16 @@ export function AboutSelectedResearch() {
         {about.selected.cards.map((card, i) => (
           <article
             key={card.shortTitle}
-            className="group flex flex-col rounded-2xl border border-charcoal/10 bg-ivory p-8 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-xl hover:shadow-forest/5"
+            className="group flex flex-col border border-hairline bg-paper p-9 transition-all duration-300 hover:-translate-y-1 hover:border-oxblood/30"
           >
-            <span className="font-display text-3xl font-semibold text-gold">
+            <span className="font-display text-4xl font-semibold text-oxblood">
               {String(i + 1).padStart(2, "0")}
             </span>
-            <h3 className="mt-6 font-display text-xl font-semibold text-forest">{card.shortTitle}</h3>
-            <p className="mt-3 flex-1 text-sm leading-relaxed text-charcoal/65">{card.summary}</p>
-            <p className="mt-6 text-xs uppercase tracking-[0.16em] text-charcoal/45">{card.paper.year}</p>
+            <h3 className="mt-6 font-display text-xl font-semibold text-ink">{card.shortTitle}</h3>
+            <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">{card.summary}</p>
+            <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-soft/60">
+              {card.paper.year}
+            </p>
             <ActionLink
               href={card.paper.href}
               variant="secondary"

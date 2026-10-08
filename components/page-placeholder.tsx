@@ -6,7 +6,7 @@ import { Eyebrow, Section } from "./section";
  */
 export function PagePlaceholder({ title, blurb }: { title: string; blurb: string }) {
   return (
-    <Section tone="ivory">
+    <Section tone="paper">
       <div className="py-16 md:py-24">
         <Eyebrow>Coming Soon</Eyebrow>
         <h1 className="max-w-3xl font-display text-4xl font-semibold leading-[1.1] tracking-[-0.02em] text-forest md:text-6xl">

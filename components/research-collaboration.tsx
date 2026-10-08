@@ -4,20 +4,20 @@ import { ActionLink, Eyebrow, Section } from "./section";
 export function ResearchCollaboration() {
   const { researchCollaboration } = contact;
   return (
-    <Section tone="forest">
+    <Section tone="ink">
       <div className="mx-auto max-w-3xl text-center">
         <Eyebrow>{researchCollaboration.eyebrow}</Eyebrow>
-        <h2 className="mt-5 font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-ivory md:text-5xl">
+        <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-paper md:text-5xl">
           {researchCollaboration.heading}
         </h2>
-        <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-ivory/70">
+        <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-paper/60">
           {researchCollaboration.body}
         </p>
         <ul className="mt-10 flex flex-wrap justify-center gap-3">
           {researchCollaboration.areas.map((area) => (
             <li
               key={area}
-              className="rounded-full border border-ivory/25 px-5 py-2.5 text-sm text-ivory/80"
+              className="rounded-full border border-paper/20 px-5 py-2.5 text-sm text-paper/75"
             >
               {area}
             </li>

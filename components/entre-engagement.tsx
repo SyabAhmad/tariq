@@ -4,14 +4,16 @@ import { ActionLink, Eyebrow, Section } from "./section";
 export function FeaturedEngagement() {
   const { engagement } = entrepreneurship;
   return (
-    <Section tone="white" className="border-y border-charcoal/10">
+    <Section tone="cream">
       <div className="mx-auto max-w-3xl text-center">
         <Eyebrow>{engagement.eyebrow}</Eyebrow>
-        <h2 className="mt-5 font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-forest md:text-4xl">
+        <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-4xl">
           {engagement.heading}
         </h2>
-        <p className="mt-4 text-xs uppercase tracking-[0.2em] text-gold">{engagement.meta}</p>
-        <p className="mx-auto mt-8 max-w-2xl leading-relaxed text-charcoal/65">{engagement.body}</p>
+        <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-oxblood">
+          {engagement.meta}
+        </p>
+        <p className="mx-auto mt-8 max-w-2xl leading-relaxed text-ink-soft">{engagement.body}</p>
         <div className="mt-10 flex justify-center">
           <ActionLink href={engagement.cta.href} variant="secondary">
             {engagement.cta.label}

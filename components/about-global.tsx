@@ -1,75 +1,47 @@
 import { about } from "@/content/about";
 import { Eyebrow, Section } from "./section";
 
-const COLUMNS = 26;
-const ROWS = 10;
-
-/** Highlighted coordinates on the decorative dot matrix (col, row). */
-const HIGHLIGHTS: Array<{ col: number; row: number; kind: "base" | "study" }> = [
-  { col: 18, row: 4, kind: "base" },
-  { col: 12, row: 2, kind: "study" },
-  { col: 11, row: 3, kind: "study" },
-];
-
-const markerStyles: Record<string, string> = {
-  base: "bg-gold",
-  study: "bg-forest",
-  engagement: "border border-gold bg-transparent",
-};
-
-function DotMap() {
-  return (
-    <div
-      aria-hidden="true"
-      className="grid gap-[10px]"
-      style={{ gridTemplateColumns: `repeat(${COLUMNS}, minmax(0, 1fr))` }}
-    >
-      {Array.from({ length: COLUMNS * ROWS }).map((_, index) => {
-        const col = index % COLUMNS;
-        const row = Math.floor(index / COLUMNS);
-        const highlight = HIGHLIGHTS.find((h) => h.col === col && h.row === row);
-        return (
-          <span
-            key={index}
-            className={`h-1 w-1 rounded-full ${
-              highlight ? `${markerStyles[highlight.kind]} scale-[1.6]` : "bg-charcoal/15"
-            }`}
-          />
-        );
-      })}
-    </div>
-  );
-}
-
 export function AboutGlobal() {
   return (
-    <Section tone="white" className="border-y border-charcoal/10">
-      <div className="grid gap-16 md:grid-cols-12 md:items-center md:gap-12">
+    <Section tone="cream">
+      <div className="grid gap-16 md:grid-cols-12 md:items-start md:gap-12">
         <div className="md:col-span-6">
           <Eyebrow>{about.global.eyebrow}</Eyebrow>
-          <h2 className="font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-forest md:text-4xl">
+          <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-ink md:text-4xl">
             {about.global.heading}
           </h2>
-          <ul className="mt-10 space-y-6">
+          <ul className="mt-12 space-y-7">
             {about.global.locations.map((location) => (
               <li key={location.label} className="flex items-start gap-4">
                 <span
                   aria-hidden="true"
-                  className={`mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full ${markerStyles[location.kind]}`}
+                  className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-oxblood"
                 />
                 <div>
-                  <p className="font-display text-lg font-semibold text-forest">{location.label}</p>
-                  <p className="text-sm text-charcoal/55">{location.detail}</p>
+                  <p className="font-display text-lg font-semibold text-ink">{location.label}</p>
+                  <p className="text-sm text-ink-soft/70">{location.detail}</p>
                 </div>
               </li>
             ))}
           </ul>
         </div>
         <div className="md:col-span-6">
-          <DotMap />
-          <p className="mt-10 border-l-2 border-gold pl-6 font-display italic leading-relaxed text-charcoal/70">
-            {about.global.note}
-          </p>
+          <div className="border border-hairline bg-paper p-10">
+            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-soft">
+              Countries
+            </p>
+            <p className="mt-6 font-display text-8xl font-semibold leading-none text-ink md:text-9xl">
+              10<span className="text-oxblood">+</span>
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+              Across study, teaching, research exposure and collaboration.
+            </p>
+            <div className="mt-8 border-t border-hairline pt-6">
+              <p className="font-display text-lg italic leading-relaxed text-ink/70">
+                {about.global.note}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </Section>

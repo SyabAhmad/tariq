@@ -3,9 +3,9 @@ import { ActionLink } from "./section";
 
 export function ResearchCta({ data }: { data: typeof researchData.cta }) {
   return (
-    <section className="bg-forest px-6 py-28 md:py-36">
+    <section className="bg-ink px-6 py-28 md:py-40">
       <div className="mx-auto max-w-6xl">
-        <h2 className="max-w-3xl font-display text-4xl font-semibold leading-[1.1] tracking-[-0.02em] text-ivory md:text-6xl">
+        <h2 className="max-w-3xl font-display text-4xl font-semibold leading-[1.06] tracking-[-0.02em] text-paper md:text-6xl">
           {data.heading}
         </h2>
         <div className="mt-12 flex flex-wrap items-center gap-4">
