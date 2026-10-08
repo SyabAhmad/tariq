@@ -13,8 +13,8 @@ export const nav: NavItem[] = [
   { label: "Research", href: "/research" },
   { label: "Entrepreneurship", href: "/entrepreneurship" },
   { label: "Publications", href: "/publications" },
-  { label: "Speaking", href: "/#speaking" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Speaking", href: "/speaking" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const profile = {

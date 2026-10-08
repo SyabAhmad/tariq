@@ -1,17 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { nav, profile } from "@/content/site";
 import { ActionLink } from "./section";
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+
+  // Close the mobile menu when clicking anywhere outside the header
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const onPointerDown = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+
+    const onEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("keydown", onEscape);
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("keydown", onEscape);
+    };
+  }, [menuOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-hairline bg-paper/90 backdrop-blur-md">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-50 border-b border-hairline bg-paper/90 backdrop-blur-md"
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-8 px-6 py-5">
-        <Link href="/" className="flex flex-col gap-0.5" onClick={() => setMenuOpen(false)}>
+        <Link
+          href="/"
+          className="flex flex-col gap-0.5"
+          onClick={() => setMenuOpen(false)}
+        >
           <span className="font-display text-xl font-semibold tracking-tight text-ink">
             {profile.wordmark}
           </span>
@@ -66,7 +96,7 @@ export function SiteHeader() {
       {/* Mobile menu panel */}
       <div
         className={`overflow-hidden border-t border-hairline bg-paper transition-all duration-300 lg:hidden ${
-          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          menuOpen ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <nav aria-label="Mobile" className="mx-auto max-w-6xl px-6 py-6">
@@ -83,7 +113,7 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
-          <div className="mt-6">
+          <div className="mt-6 pb-2">
             <ActionLink href={`mailto:${profile.email}`} className="w-full justify-center">
               Get in Touch
             </ActionLink>
