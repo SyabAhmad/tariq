@@ -3,7 +3,7 @@ import { ActionLink, Eyebrow, Section } from "./section";
 
 export function AboutRoles() {
   return (
-    <Section tone="white" className="border-y border-charcoal/10">
+    <Section id="roles" tone="white" className="border-y border-charcoal/10">
       <div className="grid gap-8 md:grid-cols-2">
         {about.leadership.roles.map((role) => (
           <article
@@ -63,7 +63,7 @@ export function Journey() {
             </div>
             {i === about.journey.stages.length - 1 && (
               <div className="mt-10">
-                <ActionLink href="/#leadership" variant="secondary">
+                <ActionLink href="/about#roles" variant="secondary">
                   View Current Roles
                 </ActionLink>
               </div>
