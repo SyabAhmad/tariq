@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { speakingPage } from "@/content/speaking";
 import { ActionLink, Eyebrow, Section } from "./section";
 
@@ -29,16 +30,25 @@ export function FeaturedSpeaking() {
           </div>
         </div>
         <div className="md:col-span-5">
-          {/* Editorial image slot — awaiting the archival event photograph */}
-          <div className="flex aspect-[4/5] flex-col items-center justify-center border border-dashed border-oxblood/40 bg-white/60 p-8 text-center">
-            <span className="font-display text-4xl" aria-hidden="true">
-              ⟨⟩
-            </span>
-            <p className="mt-5 font-display text-lg font-semibold text-ink">Event photograph</p>
-            <p className="mt-2 text-sm leading-relaxed text-ink-soft/60">
-              One strong archival image from the 17 January 2022 seminar will anchor this space.
-            </p>
-          </div>
+          <figure className="group">
+            <div className="relative overflow-hidden border border-hairline">
+              <Image
+                src="/assets/speaking-event.jpg"
+                alt="Dr. Muhammad Tariq Yousafzai speaking at the Nurturing Entrepreneurial Capacities seminar, Riphah School of Leadership, 17 January 2022"
+                width={474}
+                height={268}
+                className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+            </div>
+            <figcaption className="mt-4 flex items-baseline justify-between border-t border-hairline pt-4">
+              <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-soft/60">
+                Riphah School of Leadership · Malakand
+              </span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-oxblood">
+                2022
+              </span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </Section>
