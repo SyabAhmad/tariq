@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import { GoToTop } from "@/components/go-to-top";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
@@ -43,10 +45,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col bg-ivory font-sans text-charcoal">
+      <body className="flex min-h-full flex-col bg-paper font-sans text-ink">
         <SiteHeader />
         {children}
         <SiteFooter />
+        <ScrollToTop />
+        <GoToTop />
       </body>
     </html>
   );
