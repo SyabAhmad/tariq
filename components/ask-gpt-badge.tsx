@@ -24,8 +24,7 @@ function ChatGptIcon() {
  */
 export function AskGptBadge({ className = "" }: { className?: string }) {
   const query = `who is ${profile.name}?`;
-  const portfolioUrl = "https://github.com/SyabAhmad/tariq";
-  const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(query + " " + portfolioUrl)}`;
+  const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(query)}`;
 
   return (
     <a
