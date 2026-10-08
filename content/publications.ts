@@ -30,6 +30,8 @@ export const categories: Category[] = [
 
 export type Publication = {
   id: string;
+  /** Short display title for editorial cards. */
+  shortTitle: string;
   title: string;
   /** Lead author; co-authors noted where verified. */
   authors: string[];
@@ -51,6 +53,7 @@ export type Publication = {
 export const publications: Publication[] = [
   {
     id: "improvising-circularity",
+    shortTitle: "Improvising Circularity",
     title: "Improvising Circularity: Frugal Innovation and Informal Resource-Recovery Cycles in Pakistan",
     authors: ["Muhammad Tariq Yousafzai"],
     coAuthors: true,
@@ -65,6 +68,7 @@ export const publications: Publication[] = [
   },
   {
     id: "accidental-entrepreneurs",
+    shortTitle: "Accidental Entrepreneurs",
     title:
       "Accidental Entrepreneurs: Recycling, Upcycling and Downcycling by Ecopreneurs at Bottom of Pyramid in Upper Swat",
     authors: ["Muhammad Tariq Yousafzai"],
@@ -80,6 +84,7 @@ export const publications: Publication[] = [
   },
   {
     id: "green-organisation-culture",
+    shortTitle: "Green Organisation Culture",
     title:
       "Comparative Study of the Adoption of Green Organisation Culture on Sustainable Performance of the Industrial Sector of Khyber Pakhtunkhwa, Pakistan",
     authors: ["Muhammad Tariq Yousafzai"],
@@ -94,6 +99,7 @@ export const publications: Publication[] = [
   },
   {
     id: "shepherding-entrepreneurship",
+    shortTitle: "Shepherding Entrepreneurship",
     title:
       "Shepherding Entrepreneurship Based Value Creation Below the Base of the Pyramid in Pakistan",
     authors: ["Muhammad Tariq Yousafzai"],
@@ -110,6 +116,7 @@ export const publications: Publication[] = [
   },
   {
     id: "tenant-farmers-climate",
+    shortTitle: "Tenant Farmers & Climate Risk",
     title: "Assessing Socioeconomic Risks of Climate Change on Tenant Farmers in Pakistan",
     authors: ["Muhammad Tariq Yousafzai"],
     coAuthors: true,
@@ -127,6 +134,7 @@ export const publications: Publication[] = [
   },
   {
     id: "waste-picker-sustainopreneurs",
+    shortTitle: "Waste Picker Sustainopreneurs",
     title:
       "Sustainability of Recycling Waste Picker Sustainopreneurs for Prevention and Mitigation of Municipal Solid Waste in Swat",
     authors: ["Muhammad Tariq Yousafzai"],
@@ -145,6 +153,7 @@ export const publications: Publication[] = [
   },
   {
     id: "formal-informal-recycling-stakeholders",
+    shortTitle: "Formal & Informal Recycling",
     title:
       "Assessing the Formal and Informal Waste Recycling Business Processes through a Stakeholders Lens in Pakistan",
     authors: ["Muhammad Tariq Yousafzai"],
@@ -163,6 +172,7 @@ export const publications: Publication[] = [
   },
   {
     id: "entrepreneurial-curricula-ceo",
+    shortTitle: "Developing Entrepreneurial Learning Curricula",
     title: "Developing Entrepreneurial Learning Curricula From a CEO's Perspective",
     authors: ["Muhammad Tariq Yousafzai"],
     year: 2021,
@@ -177,6 +187,7 @@ export const publications: Publication[] = [
   },
   {
     id: "university-model-act-governance",
+    shortTitle: "University Model Act Reforms",
     title:
       "Assessing the Implications of University Model Act Reforms on Governance: A Case of Public Universities in Pakistan",
     authors: ["Muhammad Tariq Yousafzai"],

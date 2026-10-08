@@ -5,7 +5,7 @@
  * this module references them by id so there is a single source of truth.
  */
 
-import { featuredPublicationIds, publications } from "./publications";
+import { publications } from "./publications";
 
 const byId = (id: string) => publications.find((publication) => publication.id === id)!;
 
@@ -128,9 +128,15 @@ export const research = {
   featured: {
     eyebrow: "Selected Studies",
     heading: "Featured Research",
-    items: featuredPublicationIds.map((id, index) => ({
+    items: [
+      "accidental-entrepreneurs",
+      "shepherding-entrepreneurship",
+      "improvising-circularity",
+      "entrepreneurial-curricula-ceo",
+    ].map((id, index) => ({
       index: String(index + 1).padStart(2, "0"),
       publicationId: id,
+      shortTitle: byId(id).shortTitle,
       summary: byId(id).summary,
     })),
   },
