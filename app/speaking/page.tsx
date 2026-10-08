@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { PagePlaceholder } from "@/components/page-placeholder";
+import { EngagementFormats } from "@/components/engagement-formats";
+import { FeaturedSpeaking } from "@/components/featured-speaking";
+import { SpeakingArchive } from "@/components/speaking-archive";
+import { SpeakingHeader } from "@/components/speaking-header";
+import { SpeakingIntro } from "@/components/speaking-intro";
+import { SpeakingInvite, SpeakingPhilosophy } from "@/components/speaking-philosophy";
+import { SpeakingResearchLink } from "@/components/speaking-research-link";
+import { SpeakingTopics } from "@/components/speaking-topics";
 
 export const metadata: Metadata = {
   title: "Speaking & Engagement",
@@ -9,9 +16,16 @@ export const metadata: Metadata = {
 
 export default function SpeakingRoutePage() {
   return (
-    <PagePlaceholder
-      title="Speaking & Engagement"
-      blurb="Ideas that move beyond the classroom — speaking areas, engagement formats and a verified archive of engagements. Content is saved — the design follows."
-    />
+    <>
+      <SpeakingHeader />
+      <SpeakingIntro />
+      <FeaturedSpeaking />
+      <SpeakingTopics />
+      <EngagementFormats />
+      <SpeakingResearchLink />
+      <SpeakingArchive />
+      <SpeakingPhilosophy />
+      <SpeakingInvite />
+    </>
   );
 }
