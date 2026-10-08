@@ -63,8 +63,8 @@ export function Journey() {
             </div>
             {i === about.journey.stages.length - 1 && (
               <div className="mt-10">
-                <ActionLink href="/about#roles" variant="secondary">
-                  View Current Roles
+                <ActionLink href="/leadership" variant="secondary">
+                  View Academic Leadership
                 </ActionLink>
               </div>
             )}

@@ -1,5 +1,5 @@
 import { about } from "@/content/about";
-import { Eyebrow, Section } from "./section";
+import { ActionLink, Eyebrow, Section } from "./section";
 
 export function AboutLeadership() {
   return (
@@ -10,6 +10,11 @@ export function AboutLeadership() {
           <h2 className="font-display text-3xl font-semibold leading-[1.15] tracking-[-0.01em] text-forest md:text-4xl">
             {about.leadership.heading}
           </h2>
+          <div className="mt-8">
+            <ActionLink href="/leadership" variant="secondary">
+              Academic Leadership &amp; Experience
+            </ActionLink>
+          </div>
         </div>
         <div className="md:col-span-7 md:pt-14">
           <p className="text-lg leading-relaxed text-charcoal/75">{about.leadership.body}</p>

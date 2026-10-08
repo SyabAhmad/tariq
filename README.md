@@ -28,7 +28,11 @@ All copy, links and section data live in `content/*.ts` — no component edits n
 | Academic Leadership | `/leadership` | `content/leadership.ts` |
 | Contact & Collaboration | `/contact` | `content/contact.ts` |
 
-Header navigation shows six items (About · Research · Entrepreneurship · Publications · Speaking · Contact); Academic Leadership is reached via About.
+Header navigation shows six items (About · Research · Entrepreneurship · Publications · Speaking · Contact); the Academic Leadership page is reached via the About page.
+
+## Status
+
+All eight routes are designed and statically prerendered. Remaining pre-launch items: connect the contact form endpoint, replace portfolio summaries with verified abstracts, reconcile the full 60+ publication list, collect approved photographs (Speaking event photo, portrait), and confirm the institutional email and ORCID link.
 
 ## Brand
 
