@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tariq Yousafzai — Portfolio
 
-## Getting Started
+Academic portfolio website for **Muhammad Tariq Yousafzai** — Associate Professor, Centre for Management and Commerce, and Director of the Quality Enhancement Cell, University of Swat.
 
-First, run the development server:
+Built with [Next.js 16](https://nextjs.org) (App Router, Turbopack), React 19, TypeScript and Tailwind CSS v4.
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm run lint     # ESLint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Editing content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All copy, links and section data live in [`content/site.ts`](./content/site.ts) — no component edits needed for text changes. Each section in `components/` reads from that file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Brand
 
-## Learn More
+| Token | Value | Usage |
+| --- | --- | --- |
+| Warm Ivory | `#F6F3EC` | Page background |
+| White | `#FFFFFF` | Alternating sections / cards |
+| Charcoal | `#171717` | Body text |
+| Deep Forest | `#17352B` | Display type, dark sections |
+| Muted Gold | `#B59A62` | Eyebrows, accents, hairlines |
 
-To learn more about Next.js, take a look at the following resources:
+Fonts: Fraunces (display) and Inter (body), loaded via `next/font/google` in `app/layout.tsx`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Copy is compiled from public professional profiles and the research brief
+(`dr-tariq-yousafzai-portfolio-research.md`). Items self-reported on LinkedIn
+(talk dates, publication counts) are marked with sources and listed in
+`content/site.ts` for reconfirmation before publication:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Preferred name spelling and honorific
+- Institutional email address display permission
+- Current status of QEC, editorial and volunteer roles
+- Real ORCID identifier (currently an ORCID search link)
+- A CV or official publication list for the full bibliography
