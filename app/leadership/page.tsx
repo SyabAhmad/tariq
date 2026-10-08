@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { PagePlaceholder } from "@/components/page-placeholder";
+import { LeadershipAtAGlance, LeadershipHeader } from "@/components/leadership-header";
+import { InternationalPerspective, LeadershipCta } from "@/components/leadership-international";
+import { LeadershipContributions, LeadershipJourney } from "@/components/leadership-journey";
+import { LeadershipPhilosophy, ResearchLeadership, TeachingPillars } from "@/components/leadership-philosophy";
+import { CurrentRoles, QualityEnhancementCell } from "@/components/leadership-roles";
 
 export const metadata: Metadata = {
   title: "Academic Leadership",
@@ -9,9 +13,18 @@ export const metadata: Metadata = {
 
 export default function LeadershipRoutePage() {
   return (
-    <PagePlaceholder
-      title="Academic Leadership & Experience"
-      blurb="Leading academic quality, teaching and institutional development at the University of Swat. Content is saved — the design follows."
-    />
+    <>
+      <LeadershipHeader />
+      <LeadershipAtAGlance />
+      <CurrentRoles />
+      <QualityEnhancementCell />
+      <LeadershipJourney />
+      <TeachingPillars />
+      <LeadershipPhilosophy />
+      <ResearchLeadership />
+      <InternationalPerspective />
+      <LeadershipContributions />
+      <LeadershipCta />
+    </>
   );
 }
