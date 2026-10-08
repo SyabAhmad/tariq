@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { hero } from "@/content/site";
+import { AskGptBadge } from "./ask-gpt-badge";
 import { ActionLink, Eyebrow } from "./section";
 
 export function Hero() {
@@ -29,6 +30,7 @@ export function Hero() {
               <ActionLink href="/about" variant="secondary">
                 About Dr. Tariq
               </ActionLink>
+              <AskGptBadge />
             </div>
           </div>
 

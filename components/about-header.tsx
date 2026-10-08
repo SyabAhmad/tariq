@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { about } from "@/content/about";
+import { AskGptBadge } from "./ask-gpt-badge";
 import { ActionLink, Eyebrow } from "./section";
 
 export function AboutHeader() {
@@ -15,8 +16,9 @@ export function AboutHeader() {
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-soft">
               {about.header.intro}
             </p>
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap items-center gap-4">
               <ActionLink href={about.header.cta.href}>{about.header.cta.label}</ActionLink>
+              <AskGptBadge />
             </div>
           </div>
 
